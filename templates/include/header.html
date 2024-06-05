@@ -1,0 +1,138 @@
+{% load static %}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="user-form" method="POST" action="{% url 'login_view' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                       
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input class="form-control" type="text" name="username">
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input class="form-control" type="password" name="password">
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="login-action">
+                                <span class="forgot-login">
+                                    <a href="register.html">Forgot Password?</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button class="default-btn" type="submit">
+                                Log In
+                            </button>
+                        </div>
+
+                        <div class="col-12">
+                            <p class="create">Don't have an account? <a href="user-profile.html">Join us </a></p>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Sign up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="user-form" method="POST" action="{% url 'register' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="col-12">
+                        <button class="default-btn" type="submit">
+                            Sign up
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rs-head" class="full-width-header">
+    <!--Header Start-->
+    <header id="rs-header" class="rs-header transparent-header">
+        <!-- Menu Start -->
+        <div class="menu-area menu-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo-area">
+                            <a class="logo" style="font-size: 18px; font-family: fantasy;" href="index.html"><img src="{%  static 'logo.png'  %}" alt="logo">CareerJunction</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 text-right">
+                        <div class="rs-menu-area">
+                            <div class="main-menu">
+                                <div class="mobile-menu">
+                                    <a class="rs-menu-toggle">
+                                        <i class="fa fa-bars"></i>
+                                    </a>
+                                </div>
+                                <nav class="rs-menu">
+                                    <ul class="nav-menu">
+                                        <!-- Home -->
+                                        <li class="current-menu-item current_page_item"> <a href="http://127.0.0.1:8000/">Home</a></li>
+                                        <!-- End Home -->
+
+                                        <!-- About Menu Start -->
+                                        <li><a href="{% url 'roadmapList' %}">Roadmaps</a></li>
+                                        <li><a href="{% url 'predictPath' %}">PathPredictor</a></li>
+                                        <li><a href="{% url 'blog' %}">AskAnonymous</a></li>
+                                        <!-- About Menu End -->
+                                        {% if request.user.is_authenticated %}
+                                        <li>{{request.user}}</li> 
+                                        {% else %}
+                                        <li>
+                                            <a href="log-in.html" data-bs-toggle="modal" data-bs-target="#exampleModal" class="active">
+                                                Log in	
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="sign-up.html" data-bs-toggle="modal" data-bs-target="#exampleModal-2">
+                                                Sign up
+                                            </a>
+                                        </li>
+                                        <li>
+                                           
+                                           
+                                        </li>
+                                        {% endif %}
+                                    </ul> <!-- //.nav-menu -->
+                                </nav>
+                            </div> <!-- //.main-menu -->
+                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Menu End -->
+    </header>
+    <!--Header End-->
+</div>
+
+

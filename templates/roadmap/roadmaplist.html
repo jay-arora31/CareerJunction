@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-image">
+        
+        <img src="{% static 'assets/images/breadcrumbs/1.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            
+            <div class="container">
+                
+                <div class="breadcrumbs-text text-center">
+                    
+                    <h1 class="breadcrumbs-title mb-0">Roadmaps</h1>
+                </div>
+            </div>
+        </div>
+    </div>                
+</div>
+<!-- Breadcrumbs End -->
+<div class="rs-blog style2 pt-132 pb-140 md-pt-70 md-pb-80">
+    <div class="container">
+        <div class="page-info light-font mb-22">Showing 1-7 of 9 results</div>
+        <div class="row">
+            {% for i in roadmaps %}
+            <div class="col-md-6 mb-132 md-mb-60">
+                <div class="blog-wrap">
+                    <div class="top-part">
+                        <a href="{% url 'roadmapDetail' i.roadmap_slug %}">
+
+                            <img src="{% static 'assets/images/blog/grid/1.jpg' %}" alt="">
+                        </a>
+                        <div class="postby">
+                            <div class="avatar">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="content-part">
+                        <ul class="info-meta">
+                            <li><a href="{% url 'roadmapDetail' i.roadmap_slug %}">{{i.roadmap_name}}</a></li>
+                            <li>July 07, 2020</li>
+                        </ul>
+                        <h3 class="title"><a href="{% url 'roadmapDetail' i.roadmap_slug %}">{{i.roadmap_name}}</a></h3>
+                        <div class="desc mb-15">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</div>
+                        <div class="btn-part">
+                            <a class="readon3" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+        <!-- <ul class="pagenav mt-42">
+
+            
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="next"><a href="#">Next <i class="flaticon-right-arrow"></i></a></li>
+        </ul> -->
+    </div>
+</div>
+{% endblock content %}

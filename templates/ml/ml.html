@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="{% static 'new/assets/css/bootstrap.min.css' %}">
+
+<!-- Font awesome 6 -->
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+
+<!-- custom styles -->
+<link rel="stylesheet" type="text/css" href="{% static 'new/assets/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'new/assets/css/responsive.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'new/assets/css/animation.css' %}">
+
+
+<div class="rs-breadcrumbs">
+    <div class="breadcrumbs-image">
+        
+        <img src="{% static 'assets/images/breadcrumbs/1.jpg' %}" alt="Breadcrumbs Image">
+        <div class="breadcrumbs-inner">
+            
+            <div class="container">
+                
+                <div class="breadcrumbs-text text-center">
+                    
+                    <h1 class="breadcrumbs-title mb-0">Find Your Career Path!!!!!!!</h1>
+                </div>
+            </div>
+        </div>
+    </div>                
+</div>
+
+
+
+
+<form id="steps" class="show-section" method="post" action="{% url 'predicted' %}">
+    <!-- step-1 -->
+    {% csrf_token %}
+
+
+    {% for i in data %}
+    <section class="steps-inner " id="step-2">
+        <div class="wrapper">
+            <div class="step-heading">
+                <h2>Fill out your Interest!</h2>
+                <p></p>
+            </div>
+            <div class="step-bar">
+                <span class="step-counter">
+                    Question {{forloop.counter}} / 17
+                </span>
+                <div class="step-bar-inner">
+                    <div class="step-bar-move step-move m100"></div>
+                </div>
+            </div>
+            <div>
+                <div class="form-heading">
+                    {{i.title}}
+                </div>
+                <div class="form-inner" style="font-size: 15px;">
+                    <label class="form-input">
+                        <input type="radio" name="val{{forloop.counter}}" value="1">
+                        Not Interested
+                    </label>
+                    <label class="form-input">
+                        <input type="radio" name="val{{forloop.counter}}" value="2">
+                        Poor
+                    </label>
+                    <label class="form-input">
+                        <input type="radio" name="val{{forloop.counter}}" value="3">
+                        Beginner
+                    </label>
+                    <label class="form-input">
+                        <input type="radio" name="val{{forloop.counter}}" value="4" >
+                        Average
+                    </label>
+                    <label class="form-input">
+                        <input type="radio" name="val{{forloop.counter}}" value="5" >
+                        Intermediate
+                    </label>
+                    <label class="form-input">
+                        <input type="radio" name="val{{forloop.counter}}" value="6" >
+                        Excellent
+                    </label>
+                    <label class="form-input">
+                        <input type="radio" name="val{{forloop.counter}}"   value="7" >
+                        Professional
+                    </label>
+                </div>
+
+                <!-- next-prev-btn -->
+                <div class="form-buttons">
+                    {% if forloop.counter > 1 and forloop.counter <= 17 %}
+                    <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>last question</button>
+                    {% endif %}
+
+                    {% if forloop.counter != 17 %}
+                    <button type="button" class="next">next question<i class="fa-solid fa-arrow-right"></i></button>
+                    {% endif %}
+                    {% if forloop.counter == 17 %}
+                    <button type="submit" class="next">Submit<i class="fa-solid fa-arrow-right"></i></button>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endfor %}
+   
+</form>
+
+
+<!-- bootstrap JS -->
+<script src="{% static 'new/assets/js/bootstrap.min.js' %}"></script>
+
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- custom JS -->
+<script src="{% static 'new/assets/js/custom.js' %}"></script>
+
+{% endblock content %}

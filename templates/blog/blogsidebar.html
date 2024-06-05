@@ -1,0 +1,85 @@
+{% load static %}
+                <div class="sidebar-menu-wrap">
+                    <div class="sidemenu-wrap d-flex justify-content-between align-items-center">
+                        
+                        <h3>Menu</h3>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                            <i class="ri-menu-line"></i>
+                        </button>
+                    </div>
+                      
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="left-sidebar">
+                                <nav class="sidebar-nav" data-simplebar>
+                                    <ul id="sidebar-menu" class="sidebar-menu">
+                                        <li>
+                                            <a href="{% url 'blog' %}" class="box-style active">
+                                                <span class="menu-title">
+                                                    <i class="ri-home-8-line"></i>
+                                                    Home
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="has-arrow box-style">
+                                                <i class="ri-question-line"></i>
+                                                <span class="menu-title">
+                                                    Questions
+                                                </span>
+                                            </a>
+                                            <ul class="sidemenu-nav-second-level">
+                                                <li>
+                                                    <a href="all-queations.html">
+                                                        <span class="menu-title"> <a href="{% url 'yourquestion' %}">Your Posted Questions</a>  </span>
+                                                    </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </li>
+                                       
+                                        <li>
+                                            <a href="{% url 'most_answer_question' %}" class="has-arrow box-style">
+                                                <i class="ri-question-answer-fill"></i>
+                                                <span class="menu-title">
+                                                    Most answered
+                                                </span>
+                                            </a>
+                                            <ul class="sidemenu-nav-second-level">
+                                                <li>
+                                                    <a href="{% url 'most_answer_question' %}">
+                                                        <span class="menu-title">Most answered</span>
+                                                    </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'unanswer_question' %}" class="box-style">
+                                                <span class="menu-title">
+                                                    <i class="ri-checkbox-circle-line"></i>
+                                                    Unanswered
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="most-visited.html" class="box-style">
+                                                <span class="menu-title">
+                                                    <i class="ri-eye-line"></i>
+                                                    Most visited 
+                                                </span>
+                                            </a>
+                                        </li>
+                                   
+    
+                                       
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>

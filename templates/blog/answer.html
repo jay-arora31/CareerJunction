@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style></style>
+<div class="main-content-area ptb-100">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-3">
+                {% include 'blog/blogsidebar.html' %}
+
+            </div>
+
+            <div class="col-lg-6">
+                <div class="middull-content">
+                    {% include 'blog/ask.html' %}
+
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="recent-questions" role="tabpanel" aria-labelledby="recent-questions-tab">
+    
+                            <div class="single-qa-box like-dislike">
+                                <div class="d-flex">
+                                    <div class="link-unlike flex-shrink-0">
+                                      
+
+                                        <div class="donet-like-list">
+                                            <button class="like-unlink-count like">
+                                                <i class="ri-thumb-up-fill"></i>
+                                                <span>{{post_data.likecount}}</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="donet-like-list">
+                                            <button class="like-unlink-count dislike">
+                                            <i class="ri-thumb-down-fill"></i>
+                                                <span>{{post_data.unlikecount}}</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-grow-1 ms-3">
+                                        <ul class="graphic-design">
+                                            <li>
+                                                <a href="user.html">Teresa Klein</a>
+                                            </li>
+                                            <li>
+                                                <span>Latest Answer: 14 hours ago</span>
+                                            </li>
+                                            <li>
+                                                <span>In:</span>
+                                                <a href="tags.html" class="graphic">
+                                                    {{post_data.category}}
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                       <div style="color: black !important;">
+                                           {{post_data.body_content | safe}}
+                                       </div>
+
+                                        <ul class="tag-list">
+                                            
+                                            <li>
+                                             
+                                        </ul>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <ul class="anser-list">
+                                              
+                                                <li>
+                                                    <a href="most-answered.html">
+                                                        {{post_data.answercount}} Answer
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="most-visited.html">
+                                                        {{post_data.viewcount}} views
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                   
+                                                </li>
+                                            </ul>
+
+                                            <a data-bs-toggle="modal" data-bs-target="#answer"  class="default-btn">
+                                                Answer
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      
+                     
+
+                          
+                        </div>
+
+                       
+                    </div>
+                    <div>
+                        <h2>Answers</h2>
+                    </div>
+                    
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="recent-questions" role="tabpanel" aria-labelledby="recent-questions-tab">
+                                {% for i in answers %}
+                            <div class="single-qa-box like-dislike">
+                                <div class="d-flex">
+                                    <div class="link-unlike flex-shrink-0">
+                                      
+
+
+                                    </div>
+
+                                    <div class="flex-grow-1 ms-3">
+                                        <ul class="graphic-design">
+                                            <li>
+                                                <a href="#">{{i.user.username}}</a>
+                                            </li>
+                                            <li>
+                                               
+                                            </li>
+                                            <li>
+                                                
+                                            </li>
+                                        </ul>
+
+                                       <div style="color: black !important;">
+                                           {{i.body_content }}
+                                       </div>
+
+                                        <ul class="tag-list">
+                                            
+                                            <li>
+                                             
+                                        </ul>
+
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                           
+                     
+
+                            <!-- <div class="pagination-area">
+                                <a href="all-queations.html" class="next page-numbers">
+                                    <i class="ri-arrow-left-line"></i>
+                                </a>
+                                <span class="page-numbers current" aria-current="page">1</span>
+                                <a href="all-queations.html" class="page-numbers">2</a>
+                                <a href="all-queations.html" class="page-numbers">3</a>
+                                
+                                <a href="all-queations.html" class="next page-numbers">
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div> -->
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+            {% include 'blog/blogsecondsidebar.html' %}
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" id="answer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Asnwer Question🤔❓</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="user-form" enctype="multipart/form-data"  method="POST" action="{% url 'answer_question' id %}">
+                    {% csrf_token %}
+                    <label for=""> Answer Question Anonymously   </label>
+
+                    <textarea type="text" name="answer" id="" rows="15" class="form-control"> </textarea>
+                    <br><br>
+                    <div class="col-12">
+                        <button class="default-btn" type="submit">
+                            Answer Anonymously
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    let userid = "{{user.id}}";
+    document.getElementById('author').value = userid;
+</script>
+{% endblock content %}

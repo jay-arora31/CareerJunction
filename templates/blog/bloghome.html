@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style></style>
+<div class="main-content-area ptb-100">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-3">
+                {% include 'blog/blogsidebar.html' %}
+
+            </div>
+
+            <div class="col-lg-6">
+                <div class="middull-content">
+                    {% for message in messages %}
+                    <div class="alert  {% for tag in message.extra_tags.split %} 
+                                {{tag}} {%endfor%} fade show"
+                         role="alert">
+                          <div class="d-flex justify-content-end">
+                                <button type="button"
+                                        class="close btn-sm btn btn-danger"
+                                        data-dismiss="alert"
+                                        aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                </button>
+                          </div>
+                          <hr>
+                          <p class="text-center">
+                                {{ message | safe }}
+                          </p>
+                    </div>
+                    {% endfor %}
+                    {% include 'blog/ask.html' %}
+
+                    <ul class="nav nav-tabs questions-tabs d-flex justify-content-between" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="recent-questions-tab" data-bs-toggle="tab" data-bs-target="#recent-questions" type="button" role="tab" aria-controls="recent-questions" aria-selected="true">
+                                Recent Questions
+                            </button>
+                        </li>
+                      
+                     
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="recent-questions" role="tabpanel" aria-labelledby="recent-questions-tab">
+                          {% for i in blogs %}
+                            <div class="single-qa-box like-dislike">
+                                <div class="d-flex">
+                                    <div class="link-unlike flex-shrink-0">
+                                      
+
+                                        <div class="donet-like-list">
+                                            <button class="like-unlink-count like">
+                                                <a href="{% url 'like_button' i.id %}">
+                                                <i class="ri-thumb-up-fill"></i></a>
+                                                <span>{{i.likecount}}</span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="donet-like-list">
+                                            <button class="like-unlink-count dislike">
+                                                <a href="{% url 'dislike_button' i.id %}">
+                                            <i class="ri-thumb-down-fill"></i></a>
+                                                <span>{{i.unlikecount}}</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-grow-1 ms-3">
+                                        <ul class="graphic-design">
+                                            <li>
+                                                <a href="user.html">{{i.author.username}}</a>
+                                            </li>
+                                            <li>
+                                                
+                                            </li>
+                                            <li>
+                                                <span>In:</span>
+                                                <a href="tags.html" class="graphic">
+                                                    {{i.category}}
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                       <div style="color: black !important;">
+                                           {{i.body_content | safe}}
+                                       </div>
+
+                                        <ul class="tag-list">
+                                            
+                                            <li>
+                                             
+                                        </ul>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <ul class="anser-list">
+                                              
+                                                <li>
+                                                    <a href="#">
+                                                        {{i.answercount}} Answer
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        {{i.viewcount}} views
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                  
+                                                </li>
+                                            </ul>
+
+                                            <a href="{% url 'answer_question' i.id %}" class="default-btn">
+                                                Answer
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                     
+
+                            <div class="pagination-area">
+                                <a href="#" class="next page-numbers">
+                                    <i class="ri-arrow-left-line"></i>
+                                </a>
+                                <span class="page-numbers current" aria-current="page">1</span>
+                                <a href="#" class="page-numbers">2</a>
+                                <a href="#" class="page-numbers">3</a>
+                                
+                                <a href="#" class="next page-numbers">
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                      
+                    </div>
+                </div>
+            </div>
+            {% include 'blog/blogsecondsidebar.html' %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script>
+    let userid = "{{user.id}}";
+    document.getElementById('author').value = userid;
+</script>
+{% endblock content %}

@@ -1,0 +1,743 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="rs-banner home-banner relative">
+    <div class="rev_slider_wrapper">
+        <div id="rev_slider_1" class="rev_slider" data-version="5.4.5">
+            <!-- BEGIN SLIDES LIST -->
+            <ul>
+                <!-- MINIMUM SLIDE STRUCTURE -->
+                <li data-transition="fade">
+                    <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                    <img class="rev-slidebg " src="{% static 'assets/images/banner/banner_bg.jpg' %}"
+                    alt=""
+                    data-bgposition="right"
+                    data-bgfit="cover"
+                    data-bgrepeat="no-repeat">
+
+                    <!-- Title -->
+                    <h1 
+                        class="tp-caption tp-resizeme banner-title"
+                        data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+                        data-y="['300','280','230','200']" data-voffset="['0','0','0','0']"
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="text"
+                        data-responsive_offset="on"
+                        data-fontsize="['60','60','50','40']"
+                        data-lineheight="['70','70','60','40']"
+                        data-frames='[{"delay":0,"speed":1000,"frame":"0","from":"x:-100px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[20,20,20,20]">
+                        Get Your Right  <br> Career Path
+                    </h1>
+                    <div 
+                        class="tp-caption tp-resizeme banner-desc"
+                        data-y="['center','center','center','310']" data-voffset="75" 
+                        data-width="['480','480','480','420']"
+                        data-height="['auto']"
+                        data-type="text" 
+                        data-whitespace="normal"
+                        data-responsive_offset="on"
+                        data-fontsize="['18','14','14','14']"
+                        data-lineheight="['30','22','22','22']"
+                        data-frames='[{"delay":300,"speed":1000,"frame":"0","from":"x:-100px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[20,20,20,20]">
+                    <br>
+                    Our Career Recommendation System assesses skills and interests, offering personalized career suggestions with tailored learning resources for computer science students.</div>                    <div 
+                        class="tp-caption tp-resizeme button-part"
+                        data-x="left" data-hoffset="0" 
+                        data-y="center" data-voffset="190" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="text" 
+                        data-responsive_offset="on"
+                        data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"x:-100px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[20,20,20,20]">
+                        <a class="readon sl-btn" href="#">Get Started</a>
+                    </div>
+                    <!-- <div 
+                        class="tp-caption tp-resizeme button-part"
+                        data-x="left" data-hoffset="206" 
+                        data-y="center" data-voffset="190" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="text" 
+                        data-responsive_offset="on"
+                        data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"x:-100px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[20,40,20,20]">
+                        <a class="readon active sl-btn" href="#">Case Study</a>
+                    </div> -->
+
+                    <!-- Footer -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="right" data-hoffset="-90" 
+                        data-y="center" data-voffset="248" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img src="{% static 'assets/images/banner/footer.png' %}" alt="">
+                    </div>
+                    <!-- Ring -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="right" data-hoffset="8" 
+                        data-y="center" data-voffset="-80" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img class="spine" src="{% static 'assets/images/banner/ring1.png' %}" alt="">
+                    </div>
+                    <!-- Spine Short -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="right" data-hoffset="-20" 
+                        data-y="center" data-voffset="-90" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img class="spine3" src="{% static 'assets/images/banner/test.png' %}" alt="">
+                    </div>
+                    <!-- Ring Small -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="right" data-hoffset="210" 
+                        data-y="center" data-voffset="35" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img class="spine2" src="{% static 'assets/images/banner/ring2.png' %}" alt="">
+                    </div>
+                    <!-- Robot Body -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="['right','right','right','right']" data-hoffset="['330','330','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['28','828','828','828']" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+                        data-whitespace="normal"
+                        data-responsive_offset="on"
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img src="{% static 'assets/images/banner/ly2.png' %}" alt="">
+                    </div>
+                    <!-- Robot Head -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="['right','right','right','right']" data-hoffset="['460','460','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-182','828','828','828']" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+                        data-whitespace="normal"
+                        data-responsive_offset="on"
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img class="head-move" src="{% static 'assets/images/banner/ly1.png' %}" alt="">
+                    </div>
+                    <!-- Women With Table -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="['right','right','right','right']" data-hoffset="['-60','-60','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['18','18','828','828']" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img src="{% static 'assets/images/banner/ly3.png' %}" alt="">
+                    </div>
+                    <!-- Light PC Shape -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="right" data-hoffset="23" 
+                        data-y="center" data-voffset="-90" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <div class="shape flash"></div>
+                    </div>
+                    <!-- Laptop -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="['right','right','right','right']" data-hoffset="['105','105','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['-10','-10','828','828']" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":300,"frame":"0","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img src="{% static 'assets/images/banner/laptop.png' %}" alt="">
+                    </div>
+                    <!-- Tree -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="['right','right','right','right']" data-hoffset="['488','488','0','0']"
+                        data-y="['middle','middle','middle','middle']" data-voffset="['179','828','828','828']" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img src="{% static 'assets/images/banner/tree.png' %}" alt="">
+                    </div>
+                    <!-- Check -->
+                    <div 
+                        class="tp-caption tp-resizeme image-part"
+                        data-x="right" data-hoffset="309" 
+                        data-y="center" data-voffset="-272" 
+                        data-width="['auto']"
+                        data-height="['auto']"
+                        data-type="image"
+
+                        data-frames='[{"delay":0,"speed":800,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                        data-textAlign="['left','left','left','left']"
+                        data-paddingtop="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]">
+                        <img class="scale-anim" src="{% static 'assets/images/banner/ly5.png' %}" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="rs-services style2 pt-140 pb-81 md-pt-80 md-pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 pt-11 pr-50">
+                <div class="service-wrap mb-71">
+                    <div class="icon-part mb-45">
+                        <div class="circle-anim"></div>
+                        <img src="{% static 'assets/images/services/icon/1.png' %}" alt="">
+                    </div>
+                    <div class="content-part">
+                        <h3 class="title mb-21"><a href="#">Career Recommendation System</a></h3>
+                        <div class="desc">Our Career Recommendation System assesses skills and interests, offering personalized career suggestions with tailored learning resources for computer science students.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pt-11 pr-50">
+                <div class="service-wrap">
+                    <div class="icon-part mb-45">
+                        <div class="circle-anim"></div>
+                        <img src="{% static 'assets/images/services/icon/2.png' %}" alt="">
+                    </div>
+                    <div class="content-part">
+                        <h3 class="title mb-21"><a href="#">Anonymous Questionning: Your Voice, Your Privacy </a></h3>
+                        <div class="desc">Experience true freedom of expression in a secure online space where you can share your thoughts and ideas without revealing your identity.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pt-11 pr-50">
+                <div class="service-wrap mb-71">
+                    <div class="icon-part mb-45">
+                        <div class="circle-anim"></div>
+                        <img src="{% static 'assets/images/services/icon/3.png' %}" alt="">
+                    </div>
+                    <div class="content-part">
+                        <h3 class="title mb-21"><a href="#">Unlock Your Path to Success</a></h3>
+                        <div class="desc">A Structured Roadmap to Navigate the World of Computer Science Fields</div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="rs-about bg3 bg-fixed pt-170 pb-178 md-pt-110">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-xl-7 lg-mb-60">
+                <div class="social-wrap">
+                    <div class="center-icon">
+                        <i class="flaticon-central"></i>
+                    </div>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-snapchat-ghost"></i></a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="#"><i class="fa fa-comment-o"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-5">
+                <div class="sec-title pr-50 mb-44">
+                    <h2 class="title mb-23">Reach More Audience Wherever They Are</h2>
+                    <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed. Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide wit additional click throughs the digital.</div>
+                </div>
+                <ul class="listing-style">
+                    <li>Share on any Social Media Platform</li>
+                    <li>Responsive System that Supports any kind of Devices</li>
+                    <li>It Serve all around the World</li>
+                    <li>Lorem ipsum dolor sit amet sedo elit sed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rs-work-flow pt-149 pb-149">
+    <div class="flow-wrap">
+        <div class="flow-left flow-common">
+            <div class="content">
+                <h3 class="title mb-0">Input</h3>
+            </div>
+        </div>
+
+        <div class="flow-icon-left flow-common text-center">
+            <div class="icon-wrap">
+                <img class="spine" src="{% static 'assets/images/flow/process.png' %}" alt="">
+            </div>
+        </div>
+
+        <div class="flow-center flow-common">
+            <div class="row no-gutter">
+
+                <div class="col-4">
+                    <div class="empty-space-left"></div>
+                    <ul class="flowlist-left text-left">
+                  
+                    </ul>
+                </div>
+                <div class="col-3">
+                <img class="spine2" src="{% static 'assets/images/flow/1.png' %}" alt="" >
+                </div>
+                <div class="col-4">
+                    <div class="empty-space-right"></div>
+                    <ul class=" text-right">
+                        <li> .</li>
+                        <li> </li>
+                        <li > </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="flow-icon-right flow-common text-center">
+            <div class="icon-wrap">
+                <img class="" src="{% static 'assets/images/flow/output.png' %}" alt="" >
+            </div>
+        </div>
+
+        <div class="flow-right flow-common">
+            <div class="content">
+                <h3 class="title mb-0">Career Recommendation path</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="rs-testimonial style1 relative">
+    <div class="row ipad-device-full">
+        <div class="col-md-5 pl-146 pr-0 ipad-hide">
+            <div class="icon-part">
+                <ul class="social-links">
+                    <li><a class="move-yx" href="#"><img src="{% static 'assets/images/social/1.png' %}" alt=""></a></li>
+                    <li><a class="move-xy" href="#"><img src="{% static 'assets/images/social/2.png' %}" alt=""></a></li>
+                    <li><a class="move--y" href="#"><img src="{% static 'assets/images/social/3.png' %}" alt=""></a></li>
+                    <li><a class="move-y" href="#"><img src="{% static 'assets/images/social/4.png' %}" alt=""></a></li>
+                    <li><a class="move-x" href="#"><img src="{% static 'assets/images/social/5.png' %}" alt=""></a></li>
+                    <li><a class="" href="#"><img src="{% static 'assets/images/social/6.png' %}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-7 secondary-bg pl-0">
+            <div class="testi-slider">
+                <div class="circle--slider">
+                    <div class="rotate--circle">
+                        <ul class="circle--rotate" id="circle--rotate">
+                            <li class="block">
+                                <div class="sl-icon"></div>
+                            </li>
+                            <li class="block">
+                                <div class="sl-icon"></div>
+                            </li>
+                            <li class="block">
+                                <div class="sl-icon"></div>
+                            </li>
+                            <li class="block">
+                                <div class="sl-icon"></div>
+                            </li>
+                        </ul>
+                        <div class="animate-wrapper">
+                            <div class="animate">
+                                <div class="animate-img">
+                                    <div class="animate-img__in" data-image="{% static 'assets/images/testimonial/1.png' %}">
+                                        <div class="animate-more">
+                                            <div class="animate-content">
+                                                <div class="icon-part">
+                                                    <i class="flaticon-icon-157247"></i>
+                                                </div>
+                                                <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed. Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide wit additional click throughs the digital</div>
+                                                <h3 class="title">Nathan Hirsch</h3>
+                                                <span class="designation">Director of Pathao</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="animate">
+                                <div class="animate-img">
+                                    <div class="animate-img__in" data-image="{% static 'assets/images/testimonial/1.png' %}">
+                                        <div class="animate-more">
+                                            <div class="animate-content">
+                                                <div class="icon-part">
+                                                    <i class="flaticon-icon-157247"></i>
+                                                </div>
+                                                <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed. Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide wit additional click throughs the digital</div>
+                                                <h3 class="title">Nathan Hirsch</h3>
+                                                <span class="designation">Director of Pathao</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="animate">
+                                <div class="animate-img">
+                                    <div class="animate-img__in" data-image="{% static 'assets/images/testimonial/1.png' %}">
+                                        <div class="animate-more">
+                                            <div class="animate-content">
+                                                <div class="icon-part">
+                                                    <i class="flaticon-icon-157247"></i>
+                                                </div>
+                                                <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed. Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide wit additional click throughs the digital</div>
+                                                <h3 class="title">Nathan Hirsch</h3>
+                                                <span class="designation">Director of Pathao</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Rest of your code for testimonials goes here -->
+                        </div>
+                        <div class="prev"><i class="flaticon-right-arrow"></i></div>
+                        <div class="next"><i class="flaticon-left-arrow"></i></div>
+                    </div>
+                </div>
+                <img class="line" src="{% static 'assets/images/testimonial/line.png' %}" alt="">
+                <div class="circle-style"></div>
+            </div>
+        </div>
+    </div>
+    <img class="testi-shape ipad-hide" src="{% static 'assets/images/testimonial/shape.png' %}" alt="">
+</div>
+
+
+<div class="rs-blog style1 pt-135 md-pt-75 sm-pt-70">
+    <div class="container">
+        <div class="row mb-60">
+            <div class="col-lg-9 col-md-8 col-sm-6">
+                <div class="sec-title">
+                    <h2 class="title mb-0 lh1">Latest News</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 text-right sm-text-left sm-mt-15">
+                <div class="view-btn pt-15 md-pt-0">
+                    <a href="#">View All Blogs <i class="flaticon-right-arrow"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="rs-carousel owl-carousel"
+            data-loop="true"
+            data-items="3"
+            data-margin="30"
+            data-nav="false"
+            data-dots="false"
+            data-autoplay="true"
+            data-hoverpause="true"
+            data-autoplay-timeout="5000"
+            data-smart-speed="800"
+            data-nav-speed="false"
+            data-center="false"
+            data-items-md="2"
+            data-margin-md="30"
+            data-center-md="false"
+            data-nav-md="false"
+            data-dots-md="false"
+            data-items-sm="1"
+            data-nav-sm="false"
+            data-dots-sm="false"
+            data-margin-sm="30"
+            data-items-xs="1"
+            data-nav-xs="false"
+            data-dots-xs="false"
+            data-margin-xs="30">
+            <div class="item">
+                <div class="blog-wrap">
+                    <img src="{% static 'assets/images/blog/1.jpg' %}" alt="">
+                    <div class="content-wrap">
+                        <div class="date-meta">
+                            <div class="day">26</div>
+                            <span class="month">Jan</span>
+                        </div>
+                        <ul class="category">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                        <h3 class="title"><a href="#">How Artificial Intelligence Face of Banking</a></h3>
+                        <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed.</div>
+                        <div class="read-btn">
+                            <a class="readon2" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="blog-wrap">
+                    <img src="{% static 'assets/images/blog/1.jpg' %}" alt="">
+                    <div class="content-wrap">
+                        <div class="date-meta">
+                            <div class="day">26</div>
+                            <span class="month">Jan</span>
+                        </div>
+                        <ul class="category">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                        <h3 class="title"><a href="#">How Artificial Intelligence Face of Banking</a></h3>
+                        <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed.</div>
+                        <div class="read-btn">
+                            <a class="readon2" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="blog-wrap">
+                    <img src="{% static 'assets/images/blog/1.jpg' %}" alt="">
+                    <div class="content-wrap">
+                        <div class="date-meta">
+                            <div class="day">26</div>
+                            <span class="month">Jan</span>
+                        </div>
+                        <ul class="category">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                        <h3 class="title"><a href="#">How Artificial Intelligence Face of Banking</a></h3>
+                        <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed.</div>
+                        <div class="read-btn">
+                            <a class="readon2" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="blog-wrap">
+                    <img src="{% static 'assets/images/blog/1.jpg' %}" alt="">
+                    <div class="content-wrap">
+                        <div class="date-meta">
+                            <div class="day">26</div>
+                            <span class="month">Jan</span>
+                        </div>
+                        <ul class="category">
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                        <h3 class="title"><a href="#">How Artificial Intelligence Face of Banking</a></h3>
+                        <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed.</div>
+                        <div class="read-btn">
+                            <a class="readon2" href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat the same structure for other items -->
+        </div>
+    </div>
+</div>
+
+<div class="rs-cta pt-140 pb-140 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="cta-wrap red-bg">
+            <div class="content-part">
+                <h2 class="title white-color mb-28">Lets Move Forward</h2>
+                <div class="btn-part">
+                    <a href="#">Get Started</a>
+                </div>
+            </div>
+            <div class="inner-spiner">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="outer-spiner">
+                <div class="motor">
+                    <!-- Outer 15 Balls -->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact Section Start -->
+<div class="rs-contact">
+    <!-- <div class="contact-info pt-140 pb-140 md-pb-50 md-pt-80">
+        <div class="container pl-105 pr-105">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="info-wrap">
+                        <img src="{% static 'assets/images/contact/icon/1.png' %}" alt="">
+                        <div class="content-part">
+                            <h4 class="title">Address</h4>
+                            <div class="desc address">147/28 Rasouth pirerbag, Mirpur, Dhaka-1216</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="info-wrap">
+                        <img src="{% static 'assets/images/contact/icon/2.png' %}" alt="">
+                        <div class="content-part">
+                            <h4 class="title">Address</h4>
+                            <div class="desc email">
+                                <a href="mailto:yourexample@gmail.com">yourexample@gmail.com</a>
+                                <a href="mailto:domainname@gmail.com">domainname@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="info-wrap">
+                        <img src="{% static 'assets/images/contact/icon/3.png' %}" alt="">
+                        <div class="content-part">
+                            <h4 class="title">Phone</h4>
+                            <div class="desc phone">
+                                <a href="tel:(+1)889656245001">(+1) 889 6562 45001</a>
+                                <a href="tel:(+1)669855896558">(+1) 669 8558 96558</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="contact-form bg5 pt-140 pb-140 md-pt-105 md-pb-80" style="background-color: #FEF9DC;">
+        <div class="container relative pl-105 pr-105">
+            <div class="row y-middle">
+                <div class="col-lg-4 pr-80 mt--30">
+                    <div class="sec-title text-right md-mb-50">
+                        <h2 class="title mb-50 md-mb-20">Get In Touch</h2>
+                        <div class="desc">Lorem ipsum dolor sit amet, consectetur sedo adipiscing elit sed. Capitalize on low hanging fruit to</div>
+                    </div>
+                </div>
+                <div class="col-lg-8 relative">
+                    <div class="img-part">
+                        <img data-aos="fade-up" data-aos-duration="800" src="{% static 'assets/images/contact/man.png' %}" alt="">
+                    </div>
+                    <div id="form-messages"></div>
+                    <form id="contact-form" class="contact-form form-here" method="post" action="http://tekhub.rstheme.com/nlp/mailer.php">
+                        <input type="text" name="name" placeholder="Your Name" required="">
+                        <input type="email" name="email" placeholder="Your Email" required="">
+                        <textarea id="message" name="message" placeholder="Message"></textarea>
+                        <button type="submit">Submit now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Contact Section End -->
+
+<!-- Footer Section Start -->
+
+<!-- Footer Section End -->
+
+{% endblock %}

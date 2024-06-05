@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Bootstrap -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<!-- jQuery -->
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<style>
+    .wrapper{
+  width:100%;
+}
+@media(max-width:992px){
+ .wrapper{
+  width:100%;
+} 
+}
+.panel-heading {
+  padding: 0;
+	border:0;
+}
+.panel-title>a, .panel-title>a:active{
+	display:block;
+	padding:15px;
+  color:#555;
+  font-size:16px;
+  font-weight:bold;
+	text-transform:uppercase;
+	letter-spacing:1px;
+  word-spacing:3px;
+	text-decoration:none;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+}
+.panel-heading.active a:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+</style>
+
+<script>
+    $('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+  });
+
+  $('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+  });
+</script>
+
+<div class="rs-breadcrumbs">
+  <div class="breadcrumbs-image">
+      
+      <img src="{% static 'assets/images/breadcrumbs/1.jpg' %}" alt="Breadcrumbs Image">
+      <div class="breadcrumbs-inner">
+          
+          <div class="container">
+              
+              <div class="breadcrumbs-text text-center">
+                  
+                  <h1 class="breadcrumbs-title mb-0">Roadmaps</h1>
+              </div>
+          </div>
+      </div>
+  </div>                
+</div>
+<div class="rs-features bg1 pt-126 md-pt-71 md-pb-75 container">
+
+
+<div class="wrapper center-block">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      {% for key, value in result_dict.items %}
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
+                      {{ key }}
+                  </a>
+                    </h4>
+                  </div>
+                  <div id="collapse{{ forloop.counter }}" class="panel-collapse collapse" role="tabpanel"
+                  aria-labelledby="heading{{ forloop.counter }}">                    <div class="panel-body">
+                      <table class="table align-middle mb-0 bg-white">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>Topic Name</th>
+                              <th>Resources</th>
+                              <th>Status</th>
+                              
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for j in value  %}
+                            <tr>
+                              <td>
+                                <div class="d-flex align-items-center">
+                                 
+                                  <div class="ms-3">
+                                    <p class="fw-bold mb-1">{{j.subtopic_name}}</p>
+                                    
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                              
+                                <a class="text-muted mb-0" href="{{j.subtopic_link}}">Resource</a>
+                              </td>
+                              <td>
+                                <span class="badge badge-success rounded-pill d-inline">Active</span>
+                              </td>
+                             
+                            </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+      {% endfor %}
+  </div>
+  </div>
+  </div>
+{% endblock content %}

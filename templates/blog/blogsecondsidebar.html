@@ -1,0 +1,75 @@
+
+
+{% load static %}
+<div class="col-lg-3">
+    <div class="right-siderbar">
+        <div class="right-siderbar-common">
+            <a href="ask-questions.html"  data-bs-toggle="modal" data-bs-target="#askquestion" class="default-btn">
+                Ask a question
+            </a>
+        </div>
+
+        <div class="right-siderbar-common">
+            <div class="category">
+                <h3>
+                    <i class="ri-list-unordered"></i>
+                    Categories
+                </h3>
+
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Select category</option>
+                    <option value="1">Web Development</option>
+                    <option value="2">Data Science</option>
+                    <option value="3"> Data Analytics</option>
+                </select>
+                <button class="default-btn" type="submit">Search</button>
+            </div>
+        </div>
+
+      
+        <div class="right-siderbar-common">
+            <div class="answer-count">
+                <ul class="d-flex flex-wrap">
+                    <li>
+                        <span>Questions</span>
+                        <span class="count">{{tot.total_question}}</span>
+                    </li>
+                    <li>
+                        <span>Answers</span>
+                        <span class="count">{{tot.total_answer}}</span>
+                   
+                </ul>
+            </div>
+        </div>
+
+      
+
+     
+    </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" id="askquestion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ask A Question🤔❓</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="user-form" enctype="multipart/form-data"  method="POST" action="{% url 'questionpost' %}">
+                    {% csrf_token %}
+                    {{ askform.media }}
+
+                    {{ askform.as_p }}
+                    <div class="col-12">
+                        <button class="default-btn" type="submit">
+                            Post Anonymously
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
